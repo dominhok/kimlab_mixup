@@ -1,4 +1,4 @@
-# 🧪 MixUp_팀명 : Grammar Error Correction Promptathon 
+# 🧪 MixUp_KimLab : Grammar Error Correction Promptathon 
 
 본 레포지토리는 Grammar Error Correction Promptathon  실험을 재현하고 확장하기 위한 코드 및 가이드를 제공합니다.
 
