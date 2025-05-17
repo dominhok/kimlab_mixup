@@ -34,8 +34,8 @@
 ### 1. 사전 준비 
 
 ```bash
-git clone https://github.com/your-org/your-repo.git # 실제 레포지토리 주소로 변경해주세요.
-cd your-repo # 실제 레포지토리 명으로 변경해주세요.
+git clone https://github.com/dominhok/kimlab_mixup
+cd kimlab_mixip 
 ```
 
 ### 라이브러리 설치
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ### 실험 실행
 
 ```bash
-python main.py # main.py 실행으로 변경 (기존 run_experiment.py에서)
+python main.py
 ```
 
 > 📎 실행 옵션:
@@ -61,7 +61,7 @@ python main.py # main.py 실행으로 변경 (기존 run_experiment.py에서)
 * **한계**:
   * **문장 부호 오류 교정의 미흡**: 특히 쉼표(,)와 같은 특정 문장 부호의 사용을 정확하게 교정하는 데 어려움이 있습니다.
   * **Ablation Study 부족**: Few-shot 예시의 수와 일반화를 위한 랜덤 샘플링 개수 등 하이퍼파라미터 변화에 따른 성능 비교 분석(Ablation Study)이 충분히 이루어지지 못했습니다.
-  * **API 호출 제한 활용 미흡**: 제공된 API 호출 횟수(예: 3회)를 전략적으로 모두 활용하여 성능을 극대화하는 방안을 충분히 탐색하지 못했습니다. (예: 첫 번째 호출에서 초벌 교정, 두 번째 호출에서 세부 오류 검토, 세 번째 호출에서 최종 검증 등)
+  * **API 호출 제한 활용 미흡**: 제공된 API 호출 횟수(예: 3회)를 전략적으로 모두 활용하여 성능을 효과적으로로 극대화하는 방안을 충분히 탐색하지 못했습니다. (예: 첫 번째 호출에서 초벌 교정, 두 번째 호출에서 세부 오류 검토, 세 번째 호출에서 최종 검증 등)
   * **복잡하거나 미묘한 오류 처리**: 신조어, 전문 용어, 다의어 해석이 필요한 문맥, 또는 매우 미묘한 문법적 오류에 대해서는 여전히 교정 성능이 부족할 수 있습니다.
 
 * **향후 개선 방향**:
@@ -76,16 +76,17 @@ python main.py # main.py 실행으로 변경 (기존 run_experiment.py에서)
 
 ```
 📁 .
-├── main.py              # 메인 실행 파일
-├── config.py            # 설정 파일
-├── requirements.txt     # 필요한 패키지 목록
-├── README.md            # 프로젝트 설명 파일
-├── data/                # 데이터 저장 (train.csv, test.csv 등)
+├── main.py                         # 메인 실행 파일
+├── config.py                       # 설정 파일
+├── requirements.txt                # 필요한 패키지 목록
+├── README.md                       # 프로젝트 설명 파일
+├── KIMLAB_Prompt_Template.json     # 프롬프트 템플릿 JSON 파일
+├── data/                           # 데이터 저장 (train.csv, test.csv 등)
 │   └── ...
-├── utils/               # 유틸리티 함수들
-│   ├── __init__.py      # utils 패키지 초기화
-│   └── experiment.py    # 실험 실행 및 API 호출
-└── prompts/             # 프롬프트 템플릿 저장
-    ├── __init__.py      # prompts 패키지 초기화
-    └── templates.py     # 프롬프트 템플릿 정의
-``` 
+├── utils/                          # 유틸리티 함수들
+│   ├── __init__.py                 # utils 패키지 초기화
+│   └── experiment.py               # 실험 실행 및 API 호출
+└── prompts/                        # 프롬프트 템플릿 저장
+    ├── __init__.py                 # prompts 패키지 초기화
+    └── templates.py                # 프롬프트 템플릿 정의
+```
