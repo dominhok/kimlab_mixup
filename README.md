@@ -50,7 +50,7 @@ pip install -r requirements.txt
 python main.py # main.py 실행으로 변경 (기존 run_experiment.py에서)
 ```
 
-> 📎 실행 옵션 (예시):
+> 📎 실행 옵션:
 > 스크립트 내 `config.py` 또는 직접 코드 수정을 통해 실험 옵션 조절 가능 (예: `toy_size`, `template_name` 등)
 
 ---
